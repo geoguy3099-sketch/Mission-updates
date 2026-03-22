@@ -14,6 +14,14 @@
 > - Continue immediately to the next phase
 > User has pre-approved this autonomous flow by launching this mission file while stepping away.
 
+> **PHASE PERSISTENCE RULE**: Do NOT skip or abandon phases due to time pressure.
+> If a phase exceeds its estimated time:
+> - Continue working on it until COMPLETE
+> - Do not move to next phase until current phase is 100% done
+> - Update `long-mission-status.json` showing the phase is over-time
+> Only abandon/skip a phase if you hit a HARD BLOCKER (europa completely unreachable, VPN down > 5 min, disk full, critical error, etc).
+> **Completion of each phase > schedule adherence.** The 5h budget is a target, not a per-phase limit.
+
 **Mission ID:** MISSION_20260322_KERNEL_PHASES
 **Framework:** long-missions v1
 **Start time:** 11:00 UK
