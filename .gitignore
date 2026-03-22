@@ -1,0 +1,62 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# System
+.DS_Store
+.env
+.env.local
+
+# Build artifacts
+*.o
+*.so
+*.a
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+# Large simulation outputs (keep locally, don't push)
+simu_forward/
+simu_backward/
+backward_simu_forward/
+sim_run/
+kernel_output/
+logs/
+
+# Data files from europa (pull only, don't push back)
+data/
+
+# Node modules (if slidev used)
+node_modules/

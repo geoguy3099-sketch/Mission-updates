@@ -1,0 +1,26 @@
+name: Sync Mission Status
+
+on:
+  push:
+    paths:
+      - 'long-mission-status.json'
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Commit and push status file
+        run: |
+          git config user.name "Mission Monitor"
+          git config user.email "noreply@github.com"
+          git add long-mission-status.json
+          git diff --cached --quiet && echo "No changes to push" && exit 0
+          git commit -m "mission: auto-update status [skip ci]"
+          git push

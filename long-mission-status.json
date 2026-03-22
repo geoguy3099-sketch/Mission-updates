@@ -1,0 +1,22 @@
+{
+  "mission_id": "MISSION_UNSET",
+  "mission_title": "No active mission",
+  "start_time": null,
+  "hard_stop": null,
+  "elapsed_minutes": 0,
+  "total_budget_minutes": 0,
+  "progress_pct": 0,
+  "overall_status": "IDLE",
+  "current_phase": null,
+  "last_checkpoint_time": null,
+  "phases": [],
+  "resource_status": {
+    "europa_disk_gb_free": null,
+    "vpn_ok": null,
+    "last_europa_job_status": null
+  },
+  "alerts": [],
+  "abort_triggered": false,
+  "abort_reason": null,
+  "last_updated": null
+}
