@@ -14,19 +14,19 @@
 > - Continue immediately to the next phase
 > User has pre-approved this autonomous flow by launching this mission file while stepping away.
 
-> **PHASE PERSISTENCE RULE**: Do NOT skip or abandon phases due to time pressure.
-> If a phase exceeds its estimated time:
-> - Continue working on it until COMPLETE
-> - Do not move to next phase until current phase is 100% done
-> - Update `long-mission-status.json` showing the phase is over-time
-> Only abandon/skip a phase if you hit a HARD BLOCKER (europa completely unreachable, VPN down > 5 min, disk full, critical error, etc).
-> **Completion of each phase > schedule adherence.** The 5h budget is a target, not a per-phase limit.
+> **PHASE PERSISTENCE RULE**: Time is NOT a constraint. It is a signal of expected minimum duration.
+> - Keep running for at least 5 hours regardless of phase completion time
+> - Individual phases do NOT have hard time limits and may exceed estimates freely
+> - Do NOT move to next phase until current phase is 100% complete
+> - Only abandon/skip a phase if you hit a HARD BLOCKER (europa completely unreachable, VPN down > 5 min, disk full, critical compute error)
+> - When all phases complete (even if before 5h), the mission succeeds — no artificial extension needed
+> - **Completion > schedule.** The 5h is an expectation, not a constraint.
 
 **Mission ID:** MISSION_20260322_KERNEL_PHASES
 **Framework:** long-missions v1
 **Start time:** 11:00 UK
-**Hard stop:** 16:00 UK
-**Total budget:** 5 hours (300 min)
+**Nominal end time:** ~16:00 UK (5h is expected duration, NOT a hard limit)
+**Time philosophy:** Keep running for at least 5 hours. Individual phases may exceed their estimates freely. Only real blockers (unreachable europa, lost VPN, disk full) stop progress.
 
 **MISSION:** Test kernel computation parity between 1D and 3D models across 10 seismic phases.
 **GOAL:** Identify if kernel differences are real geophysics or computational artifacts.
