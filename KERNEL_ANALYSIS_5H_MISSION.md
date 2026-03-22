@@ -5,6 +5,15 @@
 > Also load the `europa` skill (`~/.copilot/skills/europa/SKILL.md`) — all compute runs on europa.
 > Follow the checkpoint format, guardrails, and status-file protocol defined in those skills exactly.
 
+> **ATLAS WORKFLOW OVERRIDE — UNSUPERVISED MODE**: This is a 5-hour long-mission with no human supervision.
+> Normally Atlas pauses after each phase to wait for user commit confirmation before proceeding.
+> **For this mission, skip the pause.** After each phase checkpoint, automatically:
+> - Write the phase-complete file
+> - Generate and execute the git commit (auto-push to GitHub)
+> - Update `long-mission-status.json`
+> - Continue immediately to the next phase
+> User has pre-approved this autonomous flow by launching this mission file while stepping away.
+
 **Mission ID:** MISSION_20260322_KERNEL_PHASES
 **Framework:** long-missions v1
 **Start time:** 11:00 UK
